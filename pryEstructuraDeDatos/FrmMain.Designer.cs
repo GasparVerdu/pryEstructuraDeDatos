@@ -89,14 +89,15 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colaToolStripMenuItem.Text = "Pila";
             // 
             // listaToolStripMenuItem
             // 
             this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            this.listaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.listaToolStripMenuItem.Text = "Cola";
+            this.listaToolStripMenuItem.Click += new System.EventHandler(this.listaToolStripMenuItem_Click);
             // 
             // listaToolStripMenuItem1
             // 
@@ -104,7 +105,7 @@
             this.simpleToolStripMenuItem,
             this.dobleToolStripMenuItem});
             this.listaToolStripMenuItem1.Name = "listaToolStripMenuItem1";
-            this.listaToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
+            this.listaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.listaToolStripMenuItem1.Text = "Lista";
             // 
             // simpleToolStripMenuItem

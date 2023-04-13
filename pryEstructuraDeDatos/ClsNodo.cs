@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace pryEstructuraDeDatos
 {
-    internal class Nodo
+    internal class ClsNodo
     {
         private Int32 Cod;
         private string Nom;
         private string Tra;
-        private Nodo sig;
+        private ClsNodo sig;
 
         public Int32 Codigo
         {
@@ -33,7 +33,7 @@ namespace pryEstructuraDeDatos
             set { Tra = value; }
         }
 
-        public Nodo Siguiente 
+        public ClsNodo Siguiente 
         {
             get { return sig; } 
             set { sig = value; }

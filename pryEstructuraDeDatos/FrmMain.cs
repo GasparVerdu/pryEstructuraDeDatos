@@ -22,5 +22,11 @@ namespace pryEstructuraDeDatos
             FrmDatosProgramador frmDatosProgramador = new FrmDatosProgramador();
             frmDatosProgramador.ShowDialog();
         }
+
+        private void listaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmColas frmColas = new FrmColas();
+            frmColas.ShowDialog();
+        }
     }
 }
