@@ -28,5 +28,11 @@ namespace pryEstructuraDeDatos
             FrmColas frmColas = new FrmColas();
             frmColas.ShowDialog();
         }
+
+        private void colaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPilas frmPilas = new frmPilas();
+            frmPilas.ShowDialog();
+        }
     }
 }
