@@ -112,13 +112,14 @@
             // simpleToolStripMenuItem
             // 
             this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.simpleToolStripMenuItem.Text = "Simple ";
+            this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
             // 
             // dobleToolStripMenuItem
             // 
             this.dobleToolStripMenuItem.Name = "dobleToolStripMenuItem";
-            this.dobleToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
+            this.dobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dobleToolStripMenuItem.Text = "Doble";
             // 
             // noLinealesToolStripMenuItem

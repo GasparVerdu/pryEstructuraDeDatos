@@ -53,5 +53,10 @@ namespace pryEstructuraDeDatos
                 lblTramiteEliminarRes.Text = "";
             }
         }
+
+        private void FrmColas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

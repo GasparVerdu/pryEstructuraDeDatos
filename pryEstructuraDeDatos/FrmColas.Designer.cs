@@ -277,6 +277,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmColas";
             this.Text = "Estructura dinamica linea - Colas";
+            this.Load += new System.EventHandler(this.FrmColas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbElementoNuevo.ResumeLayout(false);
             this.grbElementoNuevo.PerformLayout();
