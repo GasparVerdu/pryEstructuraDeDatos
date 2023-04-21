@@ -12,6 +12,7 @@ namespace pryEstructuraDeDatos
         private string Nom;
         private string Tra;
         private ClsNodo sig;
+        private ClsNodo ant;
 
         public Int32 Codigo
         {
@@ -37,6 +38,12 @@ namespace pryEstructuraDeDatos
         {
             get { return sig; } 
             set { sig = value; }
+        }
+
+        public ClsNodo Anterior
+        {
+            get { return ant; }
+            set { ant = value; }
         }
     }
 }

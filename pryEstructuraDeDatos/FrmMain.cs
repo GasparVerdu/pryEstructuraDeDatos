@@ -40,5 +40,11 @@ namespace pryEstructuraDeDatos
             frmListaSimple frmListaSimple = new frmListaSimple();
             frmListaSimple.ShowDialog();
         }
+
+        private void dobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListaDoble lista = new ListaDoble();
+            lista.ShowDialog();
+        }
     }
 }

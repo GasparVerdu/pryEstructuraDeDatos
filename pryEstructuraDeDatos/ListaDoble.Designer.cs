@@ -37,6 +37,7 @@ namespace pryEstructuraDeDatos
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
             this.grbElementoNuevo = new System.Windows.Forms.GroupBox();
@@ -48,12 +49,15 @@ namespace pryEstructuraDeDatos
             this.lblNombreNuevo = new System.Windows.Forms.Label();
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboCodigo = new System.Windows.Forms.ComboBox();
+            this.gboListarDatos = new System.Windows.Forms.GroupBox();
+            this.rboAscendente = new System.Windows.Forms.RadioButton();
+            this.rboDescendente = new System.Windows.Forms.RadioButton();
             this.gboListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.gboElementoEliminado.SuspendLayout();
             this.grbElementoNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gboListarDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboListado
@@ -109,24 +113,34 @@ namespace pryEstructuraDeDatos
             this.gboElementoEliminado.Controls.Add(this.lblCodigoEliminar);
             this.gboElementoEliminado.Location = new System.Drawing.Point(306, 12);
             this.gboElementoEliminado.Name = "gboElementoEliminado";
-            this.gboElementoEliminado.Size = new System.Drawing.Size(177, 149);
+            this.gboElementoEliminado.Size = new System.Drawing.Size(177, 77);
             this.gboElementoEliminado.TabIndex = 10;
             this.gboElementoEliminado.TabStop = false;
             this.gboElementoEliminado.Text = "Elemento eliminado";
             // 
+            // cboCodigo
+            // 
+            this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCodigo.FormattingEnabled = true;
+            this.cboCodigo.Location = new System.Drawing.Point(56, 19);
+            this.cboCodigo.Name = "cboCodigo";
+            this.cboCodigo.Size = new System.Drawing.Size(109, 21);
+            this.cboCodigo.TabIndex = 9;
+            // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(6, 120);
+            this.btnEliminar.Location = new System.Drawing.Point(6, 46);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(165, 23);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCodigoEliminar
             // 
             this.lblCodigoEliminar.AutoSize = true;
-            this.lblCodigoEliminar.Location = new System.Drawing.Point(15, 98);
+            this.lblCodigoEliminar.Location = new System.Drawing.Point(15, 24);
             this.lblCodigoEliminar.Name = "lblCodigoEliminar";
             this.lblCodigoEliminar.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoEliminar.TabIndex = 4;
@@ -177,6 +191,7 @@ namespace pryEstructuraDeDatos
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramiteNuevo
             // 
@@ -215,20 +230,45 @@ namespace pryEstructuraDeDatos
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // cboCodigo
+            // gboListarDatos
             // 
-            this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(56, 93);
-            this.cboCodigo.Name = "cboCodigo";
-            this.cboCodigo.Size = new System.Drawing.Size(109, 21);
-            this.cboCodigo.TabIndex = 9;
+            this.gboListarDatos.Controls.Add(this.rboDescendente);
+            this.gboListarDatos.Controls.Add(this.rboAscendente);
+            this.gboListarDatos.Location = new System.Drawing.Point(306, 100);
+            this.gboListarDatos.Name = "gboListarDatos";
+            this.gboListarDatos.Size = new System.Drawing.Size(177, 77);
+            this.gboListarDatos.TabIndex = 11;
+            this.gboListarDatos.TabStop = false;
+            this.gboListarDatos.Text = "Listar Datos";
+            // 
+            // rboAscendente
+            // 
+            this.rboAscendente.AutoSize = true;
+            this.rboAscendente.Location = new System.Drawing.Point(8, 25);
+            this.rboAscendente.Name = "rboAscendente";
+            this.rboAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rboAscendente.TabIndex = 0;
+            this.rboAscendente.TabStop = true;
+            this.rboAscendente.Text = "Ascendente";
+            this.rboAscendente.UseVisualStyleBackColor = true;
+            // 
+            // rboDescendente
+            // 
+            this.rboDescendente.AutoSize = true;
+            this.rboDescendente.Location = new System.Drawing.Point(8, 48);
+            this.rboDescendente.Name = "rboDescendente";
+            this.rboDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rboDescendente.TabIndex = 1;
+            this.rboDescendente.TabStop = true;
+            this.rboDescendente.Text = "Descendente";
+            this.rboDescendente.UseVisualStyleBackColor = true;
             // 
             // ListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 385);
+            this.Controls.Add(this.gboListarDatos);
             this.Controls.Add(this.gboListado);
             this.Controls.Add(this.gboElementoEliminado);
             this.Controls.Add(this.grbElementoNuevo);
@@ -242,6 +282,8 @@ namespace pryEstructuraDeDatos
             this.grbElementoNuevo.ResumeLayout(false);
             this.grbElementoNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gboListarDatos.ResumeLayout(false);
+            this.gboListarDatos.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +309,8 @@ namespace pryEstructuraDeDatos
         private System.Windows.Forms.Label lblCodigoNuevo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox cboCodigo;
+        private System.Windows.Forms.GroupBox gboListarDatos;
+        private System.Windows.Forms.RadioButton rboDescendente;
+        private System.Windows.Forms.RadioButton rboAscendente;
     }
 }

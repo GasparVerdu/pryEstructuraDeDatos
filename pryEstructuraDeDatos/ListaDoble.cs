@@ -16,5 +16,38 @@ namespace pryEstructuraDeDatos
         {
             InitializeComponent();
         }
+        clsListaDoble listaDoble = new clsListaDoble();
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            ClsNodo objNodo = new ClsNodo();
+            objNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
+            objNodo.Nombre = txtNombreNuevo.Text;
+            objNodo.Tramite = txtTramiteNuevo.Text;
+
+            listaDoble.Agregar(objNodo);
+            listaDoble.Recorrer(grilla);
+            listaDoble.Recorrer(lstListado);
+            listaDoble.Recorrer(cboCodigo);
+            txtCodigoNuevo.Text = "";
+            txtNombreNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (listaDoble.Primero != null)
+            {
+                int codigo = Convert.ToInt32(cboCodigo.Text);
+                listaDoble.Eliminar(codigo);
+                listaDoble.Recorrer(lstListado);
+                listaDoble.Recorrer(cboCodigo);
+                listaDoble.Recorrer(grilla);
+            }
+            else
+            {
+                MessageBox.Show("la lista esta vacia ");
+            }
+        }
     }
 }

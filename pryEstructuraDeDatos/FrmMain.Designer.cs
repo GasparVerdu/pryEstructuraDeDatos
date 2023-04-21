@@ -121,6 +121,7 @@
             this.dobleToolStripMenuItem.Name = "dobleToolStripMenuItem";
             this.dobleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.dobleToolStripMenuItem.Text = "Doble";
+            this.dobleToolStripMenuItem.Click += new System.EventHandler(this.dobleToolStripMenuItem_Click);
             // 
             // noLinealesToolStripMenuItem
             // 
