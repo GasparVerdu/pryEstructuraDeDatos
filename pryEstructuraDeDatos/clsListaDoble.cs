@@ -92,9 +92,14 @@ namespace pryEstructuraDeDatos
                             ant = aux;
                             aux = aux.Siguiente;
                         }
-                        ant.Siguiente = aux.Siguiente;
+
                         aux = aux.Siguiente;
+                        ant.Siguiente = aux;
                         aux.Anterior = ant;
+
+                        //ant.Siguiente = aux.Siguiente;
+                        //aux = aux.Siguiente;
+                        //aux.Anterior = ant;
                     }
                 }
             }
