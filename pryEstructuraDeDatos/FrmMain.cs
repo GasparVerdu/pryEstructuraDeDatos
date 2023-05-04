@@ -46,5 +46,11 @@ namespace pryEstructuraDeDatos
             ListaDoble lista = new ListaDoble();
             lista.ShowDialog();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario arbolBinario = new frmArbolBinario();
+            arbolBinario.ShowDialog();
+        }
     }
 }

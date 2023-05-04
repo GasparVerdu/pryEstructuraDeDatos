@@ -49,5 +49,10 @@ namespace pryEstructuraDeDatos
                 MessageBox.Show("la lista esta vacia ");
             }
         }
+
+        private void ListaDoble_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
