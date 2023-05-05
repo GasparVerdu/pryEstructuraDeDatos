@@ -107,7 +107,7 @@ namespace pryEstructuraDeDatos
         public void RecorrerPRE(DataGridView grilla)
         {
             grilla.Rows.Clear();
-            InOrdenPost(grilla, raiz);
+            InOrdenPRE(grilla, raiz);
 
         }//grilla
 
