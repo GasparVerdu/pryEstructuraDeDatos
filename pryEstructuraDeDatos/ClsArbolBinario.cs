@@ -95,38 +95,38 @@ namespace pryEstructuraDeDatos
         public void RecorrerPRE(ListBox lista)
         {
             lista.Items.Clear();
-            InOrdenPRE(lista, raiz);
+            OrdenPRE(lista, raiz);
 
         } //lista
         public void RecorrerPRE(ComboBox combo)
         {
             combo.Items.Clear();
-            InOrdenPRE(combo, raiz);
+            OrdenPRE(combo, raiz);
 
         }//combo
         public void RecorrerPRE(DataGridView grilla)
         {
             grilla.Rows.Clear();
-            InOrdenPRE(grilla, raiz);
+            OrdenPRE(grilla, raiz);
 
         }//grilla
 
         public void RecorrerPOST(ListBox lista)
         {
             lista.Items.Clear();
-            InOrdenPost(lista, raiz);
+            OrdenPost(lista, raiz);
 
         } //lista
         public void RecorrerPOST(ComboBox combo)
         {
             combo.Items.Clear();
-            InOrdenPost(combo, raiz);
+            OrdenPost(combo, raiz);
 
         }//combo
         public void RecorrerPOST(DataGridView grilla)
         {
             grilla.Rows.Clear();
-            InOrdenPost(grilla, raiz);
+            OrdenPost(grilla, raiz);
 
         }//grilla
         public void InOrdenASC(ListBox lst , ClsNodo R) //lista
@@ -167,15 +167,15 @@ namespace pryEstructuraDeDatos
         }
         //public void InOrdenASC(StreamWriter sw, ClsNodo R) //grilla
         //{
-            //if (R.izquierda != null)
-            //{
-            //    InOrdenASC(grilla, R.izquierda);
-            //}
-            //grilla.Rows.Add(R.Codigo);
-            //if (R.derecha != null)
-            //{
-            //    InOrdenASC(grilla, R.derecha);
-            //}
+        //if (R.izquierda != null)
+        //{
+        //    OrdenPRE(grilla, R.izquierda);
+        //}
+        //grilla.Rows.Add(R.Codigo);
+        //if (R.derecha != null)
+        //{
+        //    InOrdenASC(grilla, R.derecha);
+        //}
         //}
 
         public void InOrdenDSC(ListBox lst, ClsNodo R) //lista
