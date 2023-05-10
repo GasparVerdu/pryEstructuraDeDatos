@@ -90,14 +90,14 @@
             // colaToolStripMenuItem
             // 
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.colaToolStripMenuItem.Text = "Pila";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
             // listaToolStripMenuItem
             // 
             this.listaToolStripMenuItem.Name = "listaToolStripMenuItem";
-            this.listaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listaToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.listaToolStripMenuItem.Text = "Cola";
             this.listaToolStripMenuItem.Click += new System.EventHandler(this.listaToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@
             this.simpleToolStripMenuItem,
             this.dobleToolStripMenuItem});
             this.listaToolStripMenuItem1.Name = "listaToolStripMenuItem1";
-            this.listaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.listaToolStripMenuItem1.Size = new System.Drawing.Size(98, 22);
             this.listaToolStripMenuItem1.Text = "Lista";
             // 
             // simpleToolStripMenuItem
@@ -135,7 +135,7 @@
             // arbolBinarioToolStripMenuItem
             // 
             this.arbolBinarioToolStripMenuItem.Name = "arbolBinarioToolStripMenuItem";
-            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.arbolBinarioToolStripMenuItem.Text = "Arbol binario";
             this.arbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.arbolBinarioToolStripMenuItem_Click);
             // 
@@ -148,6 +148,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmEstructuraDatos";
             this.Text = "Estructura de datos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

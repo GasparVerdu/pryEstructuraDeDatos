@@ -50,8 +50,8 @@ namespace pryEstructuraDeDatos
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gboListarDatos = new System.Windows.Forms.GroupBox();
-            this.rboAscendente = new System.Windows.Forms.RadioButton();
             this.rboDescendente = new System.Windows.Forms.RadioButton();
+            this.rboAscendente = new System.Windows.Forms.RadioButton();
             this.gboListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.gboElementoEliminado.SuspendLayout();
@@ -241,17 +241,6 @@ namespace pryEstructuraDeDatos
             this.gboListarDatos.TabStop = false;
             this.gboListarDatos.Text = "Listar Datos";
             // 
-            // rboAscendente
-            // 
-            this.rboAscendente.AutoSize = true;
-            this.rboAscendente.Location = new System.Drawing.Point(8, 25);
-            this.rboAscendente.Name = "rboAscendente";
-            this.rboAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rboAscendente.TabIndex = 0;
-            this.rboAscendente.TabStop = true;
-            this.rboAscendente.Text = "Ascendente";
-            this.rboAscendente.UseVisualStyleBackColor = true;
-            // 
             // rboDescendente
             // 
             this.rboDescendente.AutoSize = true;
@@ -262,6 +251,17 @@ namespace pryEstructuraDeDatos
             this.rboDescendente.TabStop = true;
             this.rboDescendente.Text = "Descendente";
             this.rboDescendente.UseVisualStyleBackColor = true;
+            // 
+            // rboAscendente
+            // 
+            this.rboAscendente.AutoSize = true;
+            this.rboAscendente.Location = new System.Drawing.Point(8, 25);
+            this.rboAscendente.Name = "rboAscendente";
+            this.rboAscendente.Size = new System.Drawing.Size(82, 17);
+            this.rboAscendente.TabIndex = 0;
+            this.rboAscendente.TabStop = true;
+            this.rboAscendente.Text = "Ascendente";
+            this.rboAscendente.UseVisualStyleBackColor = true;
             // 
             // ListaDoble
             // 

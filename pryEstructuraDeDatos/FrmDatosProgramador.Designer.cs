@@ -37,6 +37,7 @@
             this.lblMat = new System.Windows.Forms.Label();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.lblCarreraED = new System.Windows.Forms.Label();
+            this.btnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pcbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,80 +53,99 @@
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
+            this.lblDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDNI.Location = new System.Drawing.Point(158, 12);
             this.lblDNI.Name = "lblDNI";
-            this.lblDNI.Size = new System.Drawing.Size(29, 13);
+            this.lblDNI.Size = new System.Drawing.Size(33, 13);
             this.lblDNI.TabIndex = 1;
             this.lblDNI.Text = "DNI:";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
+            this.lblNombre.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblNombre.Location = new System.Drawing.Point(228, 58);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(72, 13);
+            this.lblNombre.Size = new System.Drawing.Size(74, 15);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "Gaspar Verdu";
             // 
             // lblNom
             // 
             this.lblNom.AutoSize = true;
+            this.lblNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNom.Location = new System.Drawing.Point(158, 58);
             this.lblNom.Name = "lblNom";
-            this.lblNom.Size = new System.Drawing.Size(44, 13);
+            this.lblNom.Size = new System.Drawing.Size(50, 13);
             this.lblNom.TabIndex = 3;
             this.lblNom.Text = "Nombre";
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
+            this.lblDocumento.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblDocumento.Location = new System.Drawing.Point(228, 12);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(55, 13);
+            this.lblDocumento.Size = new System.Drawing.Size(57, 15);
             this.lblDocumento.TabIndex = 4;
             this.lblDocumento.Text = "44897844";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(158, 100);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(53, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Materia:";
             // 
             // lblMat
             // 
             this.lblMat.AutoSize = true;
+            this.lblMat.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblMat.Location = new System.Drawing.Point(228, 100);
             this.lblMat.Name = "lblMat";
-            this.lblMat.Size = new System.Drawing.Size(99, 13);
+            this.lblMat.Size = new System.Drawing.Size(101, 15);
             this.lblMat.TabIndex = 6;
             this.lblMat.Text = "Estructura de datos";
             // 
             // lblCarrera
             // 
             this.lblCarrera.AutoSize = true;
+            this.lblCarrera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCarrera.Location = new System.Drawing.Point(228, 137);
             this.lblCarrera.Name = "lblCarrera";
-            this.lblCarrera.Size = new System.Drawing.Size(102, 13);
+            this.lblCarrera.Size = new System.Drawing.Size(104, 15);
             this.lblCarrera.TabIndex = 7;
             this.lblCarrera.Text = "Analista en sistemas";
             // 
             // lblCarreraED
             // 
             this.lblCarreraED.AutoSize = true;
+            this.lblCarreraED.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarreraED.Location = new System.Drawing.Point(158, 137);
             this.lblCarreraED.Name = "lblCarreraED";
-            this.lblCarreraED.Size = new System.Drawing.Size(41, 13);
+            this.lblCarreraED.Size = new System.Drawing.Size(48, 13);
             this.lblCarreraED.TabIndex = 8;
             this.lblCarreraED.Text = "Carrera";
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.Location = new System.Drawing.Point(12, 132);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.TabIndex = 9;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // FrmDatosProgramador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(354, 181);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblCarreraED);
             this.Controls.Add(this.lblCarrera);
             this.Controls.Add(this.lblMat);
@@ -154,5 +174,6 @@
         private System.Windows.Forms.Label lblMat;
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Label lblCarreraED;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

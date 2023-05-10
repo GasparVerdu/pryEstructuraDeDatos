@@ -37,6 +37,7 @@ namespace pryEstructuraDeDatos
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tramite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gboElementoEliminado = new System.Windows.Forms.GroupBox();
+            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblCodigoEliminar = new System.Windows.Forms.Label();
             this.grbElementoNuevo = new System.Windows.Forms.GroupBox();
@@ -48,7 +49,6 @@ namespace pryEstructuraDeDatos
             this.lblNombreNuevo = new System.Windows.Forms.Label();
             this.lblCodigoNuevo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cboCodigo = new System.Windows.Forms.ComboBox();
             this.gboListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.gboElementoEliminado.SuspendLayout();
@@ -113,6 +113,15 @@ namespace pryEstructuraDeDatos
             this.gboElementoEliminado.TabIndex = 10;
             this.gboElementoEliminado.TabStop = false;
             this.gboElementoEliminado.Text = "Elemento eliminado";
+            // 
+            // cboCodigo
+            // 
+            this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCodigo.FormattingEnabled = true;
+            this.cboCodigo.Location = new System.Drawing.Point(57, 54);
+            this.cboCodigo.Name = "cboCodigo";
+            this.cboCodigo.Size = new System.Drawing.Size(108, 21);
+            this.cboCodigo.TabIndex = 5;
             // 
             // btnEliminar
             // 
@@ -216,15 +225,6 @@ namespace pryEstructuraDeDatos
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            // 
-            // cboCodigo
-            // 
-            this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(57, 54);
-            this.cboCodigo.Name = "cboCodigo";
-            this.cboCodigo.Size = new System.Drawing.Size(108, 21);
-            this.cboCodigo.TabIndex = 5;
             // 
             // frmListaSimple
             // 
