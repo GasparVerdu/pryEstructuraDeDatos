@@ -228,106 +228,106 @@ namespace pryEstructuraDeDatos
         //}//streamWriter
 
 
-        public void InOrdenPRE(ListBox lst, ClsNodo R)
+        public void OrdenPRE(ListBox lst, ClsNodo R)
         {
             lst.Items.Add(R.Codigo);//R
             if (R.izquierda != null)
             {
-                InOrdenPRE(lst, R.izquierda);//I
+                OrdenPRE(lst, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPRE(lst, R.derecha);//D
+                OrdenPRE(lst, R.derecha);//D
             }
         } //lista
-        public void InOrdenPRE(ComboBox combo, ClsNodo R)
+        public void OrdenPRE(ComboBox combo, ClsNodo R)
         {
             combo.Items.Add(R.Codigo);//R
             if (R.izquierda != null)
             {
-                InOrdenPRE(combo, R.izquierda);//I
+                OrdenPRE(combo, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPRE(combo, R.derecha);//D
+                OrdenPRE(combo, R.derecha);//D
             }
         } //combo
-        public void InOrdenPRE(DataGridView grilla, ClsNodo R)
+        public void OrdenPRE(DataGridView grilla, ClsNodo R)
         {
             grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);//R
             if (R.izquierda != null)
             {
-                InOrdenPRE(grilla, R.izquierda);//I
+                OrdenPRE(grilla, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPRE(grilla, R.derecha);//D
+                OrdenPRE(grilla, R.derecha);//D
             }
         }//grilla
-        //public void InOrdenPRE(StreamWriter sw, ClsNodo R)
-        //{
-            //grilla.Rows.Add(R.Codigo);//R
-            //if (R.izquierda != null)
-            //{
-            //    InOrdenPRE(grilla, R.izquierda);//I
-            //}
-            //if (R.derecha != null)
-            //{
-            //    InOrdenPRE(grilla, R.derecha);//D
-            //}
-        //}//streamWriter
+         //public void OrdenPRE(StreamWriter sw, ClsNodo R)
+         //{
+         //grilla.Rows.Add(R.Codigo);//R
+         //if (R.izquierda != null)
+         //{
+         //    OrdenPRE(grilla, R.izquierda);//I
+         //}
+         //if (R.derecha != null)
+         //{
+         //    OrdenPRE(grilla, R.derecha);//D
+         //}
+         //}//streamWriter
 
-        public void InOrdenPost(ListBox lst, ClsNodo R)
+        public void OrdenPost(ListBox lst, ClsNodo R)
         {
             
             if (R.izquierda != null)
             {
-                InOrdenPost(lst, R.izquierda);//I
+                OrdenPost(lst, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPost(lst, R.derecha);//D
+                OrdenPost(lst, R.derecha);//D
             }
             lst.Items.Add(R.Codigo);//R
         } //lista
-        public void InOrdenPost( ComboBox combo, ClsNodo R)
+        public void OrdenPost( ComboBox combo, ClsNodo R)
         {
 
             if (R.izquierda != null)
             {
-                InOrdenPost(combo, R.izquierda);//I
+                OrdenPost(combo, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPost(combo, R.derecha);//D
+                OrdenPost(combo, R.derecha);//D
             }
             combo.Items.Add(R.Codigo);//R
         }//combo
-        public void InOrdenPost(DataGridView grilla, ClsNodo R)
+        public void OrdenPost(DataGridView grilla, ClsNodo R)
         {
 
             if (R.izquierda != null)
             {
-                InOrdenPost(grilla, R.izquierda);//I
+                OrdenPost(grilla, R.izquierda);//I
             }
             if (R.derecha != null)
             {
-                InOrdenPost(grilla, R.derecha);//D
+                OrdenPost(grilla, R.derecha);//D
             }
             grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);//R
         }//grilla
-        //public void InOrdenPost(StreamWriter sw, ClsNodo R)
-        //{
+         //public void OrdenPost(StreamWriter sw, ClsNodo R)
+         //{
 
-            //if (R.izquierda != null)
-            //{
-            //    InOrdenPost(grilla, R.izquierda);//I
-            //}
-            //if (R.derecha != null)
-            //{
-            //    InOrdenPost(grilla, R.derecha);//D
-            //}
-            //grilla.Rows.Add(R.Codigo);//R
+        //if (R.izquierda != null)
+        //{
+        //    OrdenPost(grilla, R.izquierda);//I
+        //}
+        //if (R.derecha != null)
+        //{
+        //    OrdenPost(grilla, R.derecha);//D
+        //}
+        //grilla.Rows.Add(R.Codigo);//R
         //}//streamWriter
 
     }
