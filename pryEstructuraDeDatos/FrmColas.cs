@@ -22,16 +22,26 @@ namespace pryEstructuraDeDatos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsNodo objNodo = new ClsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
-            objNodo.Nombre = txtNombreNuevo.Text;
-            objNodo.Tramite = txtTramiteNuevo.Text;
+            if (txtCodigoNuevo.Text != "" & txtNombreNuevo.Text != "" & txtTramiteNuevo.Text != "")
+            {
+                objNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
+                objNodo.Nombre = txtNombreNuevo.Text;
+                objNodo.Tramite = txtTramiteNuevo.Text;
 
-            FilaDePersonas.Agregar(objNodo);
-            FilaDePersonas.Recorrer(grilla);
-            FilaDePersonas.Recorrer(lstListado);
-            txtCodigoNuevo.Text = "";
-            txtNombreNuevo.Text = "";
-            txtTramiteNuevo.Text = "";
+                FilaDePersonas.Agregar(objNodo);
+                FilaDePersonas.Recorrer(grilla);
+                FilaDePersonas.Recorrer(lstListado);
+                txtCodigoNuevo.Text = "";
+                txtNombreNuevo.Text = "";
+                txtTramiteNuevo.Text = "";
+
+                txtCodigoNuevo.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Complete los campos");
+            }
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

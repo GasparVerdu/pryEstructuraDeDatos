@@ -37,6 +37,12 @@ namespace pryEstructuraDeDatos
             arbolBinario.RecorrerASC(cboCodigo);
             arbolBinario.RecorrerASC(grilla);
 
+            txtCodigoNuevo.Text = "";
+            txtNombreNuevo.Text = "";
+            txtTramiteNuevo.Text = "";
+
+            txtCodigoNuevo.Focus();
+
 
         }
 
@@ -78,6 +84,14 @@ namespace pryEstructuraDeDatos
                 arbolBinario.RecorrerPOST(lstListado);
                 arbolBinario.RecorrerPOST(cboCodigo);
                 arbolBinario.RecorrerPOST(grilla);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+
             }
         }
     }

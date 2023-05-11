@@ -251,6 +251,7 @@ namespace pryEstructuraDeDatos
             this.rboDescendente.TabStop = true;
             this.rboDescendente.Text = "Descendente";
             this.rboDescendente.UseVisualStyleBackColor = true;
+            this.rboDescendente.CheckedChanged += new System.EventHandler(this.rboDescendente_CheckedChanged);
             // 
             // rboAscendente
             // 
@@ -262,6 +263,7 @@ namespace pryEstructuraDeDatos
             this.rboAscendente.TabStop = true;
             this.rboAscendente.Text = "Ascendente";
             this.rboAscendente.UseVisualStyleBackColor = true;
+            this.rboAscendente.CheckedChanged += new System.EventHandler(this.rboAscendente_CheckedChanged);
             // 
             // ListaDoble
             // 
@@ -275,6 +277,7 @@ namespace pryEstructuraDeDatos
             this.Controls.Add(this.pictureBox1);
             this.Name = "ListaDoble";
             this.Text = "ListaDoble";
+            this.Load += new System.EventHandler(this.ListaDoble_Load_1);
             this.gboListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.gboElementoEliminado.ResumeLayout(false);

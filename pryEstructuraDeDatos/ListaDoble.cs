@@ -21,17 +21,29 @@ namespace pryEstructuraDeDatos
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ClsNodo objNodo = new ClsNodo();
-            objNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
-            objNodo.Nombre = txtNombreNuevo.Text;
-            objNodo.Tramite = txtTramiteNuevo.Text;
 
-            listaDoble.Agregar(objNodo);
-            listaDoble.Recorrer(grilla);
-            listaDoble.Recorrer(lstListado);
-            listaDoble.Recorrer(cboCodigo);
-            txtCodigoNuevo.Text = "";
-            txtNombreNuevo.Text = "";
-            txtTramiteNuevo.Text = "";
+            if (txtCodigoNuevo.Text != "" & txtNombreNuevo.Text != "" & txtTramiteNuevo.Text !="" )
+            {
+
+                objNodo.Codigo = Convert.ToInt32(txtCodigoNuevo.Text);
+                objNodo.Nombre = txtNombreNuevo.Text;
+                objNodo.Tramite = txtTramiteNuevo.Text;
+
+                listaDoble.Agregar(objNodo);
+                listaDoble.RecorrerASC(grilla);
+                listaDoble.RecorrerASC(lstListado);
+                listaDoble.RecorrerASC(cboCodigo);
+                txtCodigoNuevo.Text = "";
+                txtNombreNuevo.Text = "";
+                txtTramiteNuevo.Text = "";
+
+                txtCodigoNuevo.Focus();
+            }
+            else
+            {
+
+                MessageBox.Show("Complete los campos");
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -40,9 +52,9 @@ namespace pryEstructuraDeDatos
             {
                 int codigo = Convert.ToInt32(cboCodigo.Text);
                 listaDoble.Eliminar(codigo);
-                listaDoble.Recorrer(lstListado);
-                listaDoble.Recorrer(cboCodigo);
-                listaDoble.Recorrer(grilla);
+                listaDoble.RecorrerASC(lstListado);
+                listaDoble.RecorrerASC(cboCodigo);
+                listaDoble.RecorrerASC(grilla);
             }
             else
             {
@@ -52,7 +64,26 @@ namespace pryEstructuraDeDatos
 
         private void ListaDoble_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void rboAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            listaDoble.RecorrerASC(grilla);
+            listaDoble.RecorrerASC(lstListado);
+            listaDoble.RecorrerASC(cboCodigo);
+        }
+
+        private void rboDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            listaDoble.RecorrerDSC(grilla);
+            listaDoble.RecorrerDSC(lstListado);
+            listaDoble.RecorrerDSC(cboCodigo);
+        }
+
+        private void ListaDoble_Load_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }

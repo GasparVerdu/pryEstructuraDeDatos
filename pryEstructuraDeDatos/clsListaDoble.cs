@@ -105,7 +105,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
-        public void Recorrer(DataGridView grilla)
+        public void RecorrerASC(DataGridView grilla)
         {
             ClsNodo aux = Primero;
             grilla.Rows.Clear();
@@ -116,7 +116,7 @@ namespace pryEstructuraDeDatos
             }
         }
 
-        public void Recorrer(ListBox list)
+        public void RecorrerASC(ListBox list)
         {
             ClsNodo aux = Primero;
             list.Items.Clear();
@@ -127,7 +127,7 @@ namespace pryEstructuraDeDatos
                 aux = aux.Siguiente;
             }
         }
-        public void Recorrer(ComboBox combo)
+        public void RecorrerASC(ComboBox combo)
         {
             ClsNodo aux = Primero;
             combo.Items.Clear();
@@ -136,6 +136,37 @@ namespace pryEstructuraDeDatos
             {
                 combo.Items.Add(aux.Codigo);
                 aux = aux.Siguiente;
+            }
+        }
+        public void RecorrerDSC(DataGridView grilla)
+        {
+            ClsNodo aux = Ultimo;
+            grilla.Rows.Clear();
+            while (aux != null)
+            {
+                grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDSC(ListBox list)
+        {
+            ClsNodo aux = Ultimo;
+            list.Items.Clear();
+            while (aux != null)
+            {
+                list.Items.Add(aux.Codigo + "" + aux.Nombre + "" + aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerDSC(ComboBox combo)
+        {
+            ClsNodo aux = Ultimo;
+            combo.Items.Clear();
+            while (aux != null)
+            {
+                combo.Items.Add(aux.Codigo + "" + aux.Nombre + "" + aux.Tramite);
+                aux = aux.Anterior;
             }
         }
     }
