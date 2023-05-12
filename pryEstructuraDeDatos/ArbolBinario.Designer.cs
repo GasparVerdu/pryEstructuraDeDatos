@@ -54,11 +54,11 @@
             this.rdbPostOrden = new System.Windows.Forms.RadioButton();
             this.TView = new System.Windows.Forms.TreeView();
             this.gboBuscar = new System.Windows.Forms.GroupBox();
+            this.txtNombreBus = new System.Windows.Forms.TextBox();
             this.cboCodBuscar = new System.Windows.Forms.ComboBox();
+            this.txtTramiteBus = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblCodigoBuscar = new System.Windows.Forms.Label();
-            this.txtTramiteBus = new System.Windows.Forms.TextBox();
-            this.txtNombreBus = new System.Windows.Forms.TextBox();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.gboListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
@@ -308,6 +308,14 @@
             this.gboBuscar.TabStop = false;
             this.gboBuscar.Text = "Elemento eliminado";
             // 
+            // txtNombreBus
+            // 
+            this.txtNombreBus.Enabled = false;
+            this.txtNombreBus.Location = new System.Drawing.Point(177, 17);
+            this.txtNombreBus.Name = "txtNombreBus";
+            this.txtNombreBus.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreBus.TabIndex = 23;
+            // 
             // cboCodBuscar
             // 
             this.cboCodBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -317,6 +325,15 @@
             this.cboCodBuscar.Size = new System.Drawing.Size(115, 21);
             this.cboCodBuscar.TabIndex = 9;
             this.cboCodBuscar.SelectedIndexChanged += new System.EventHandler(this.cboCodBuscar_SelectedIndexChanged);
+            // 
+            // txtTramiteBus
+            // 
+            this.txtTramiteBus.Enabled = false;
+            this.txtTramiteBus.Location = new System.Drawing.Point(177, 46);
+            this.txtTramiteBus.Name = "txtTramiteBus";
+            this.txtTramiteBus.Size = new System.Drawing.Size(100, 20);
+            this.txtTramiteBus.TabIndex = 22;
+            this.txtTramiteBus.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // btnBuscar
             // 
@@ -336,23 +353,6 @@
             this.lblCodigoBuscar.Size = new System.Drawing.Size(43, 13);
             this.lblCodigoBuscar.TabIndex = 4;
             this.lblCodigoBuscar.Text = "Codigo:";
-            // 
-            // txtTramiteBus
-            // 
-            this.txtTramiteBus.Enabled = false;
-            this.txtTramiteBus.Location = new System.Drawing.Point(177, 46);
-            this.txtTramiteBus.Name = "txtTramiteBus";
-            this.txtTramiteBus.Size = new System.Drawing.Size(100, 20);
-            this.txtTramiteBus.TabIndex = 22;
-            this.txtTramiteBus.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtNombreBus
-            // 
-            this.txtNombreBus.Enabled = false;
-            this.txtNombreBus.Location = new System.Drawing.Point(177, 17);
-            this.txtNombreBus.Name = "txtNombreBus";
-            this.txtNombreBus.Size = new System.Drawing.Size(100, 20);
-            this.txtNombreBus.TabIndex = 23;
             // 
             // btnEquilibrar
             // 
@@ -381,7 +381,6 @@
             this.Controls.Add(this.grbElementoNuevo);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmArbolBinario";
-            this.Text = "ArbolBinario";
             this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.gboListado.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
