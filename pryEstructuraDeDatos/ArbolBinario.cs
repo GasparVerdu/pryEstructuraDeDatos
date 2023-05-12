@@ -96,10 +96,15 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (cboCodigo.Text != "")
+            if (arbolBinario.raiz != null)
             {
                 Int32 Borrar = Convert.ToInt32(cboCodigo.Text);
                 arbolBinario.Eliminar(Borrar);
+                arbolBinario.RecorrerASC(grilla);
+                arbolBinario.RecorrerASC(lstListado);
+                arbolBinario.RecorrerASC(cboCodigo);
+                arbolBinario.RecorrerASC(cboCodBuscar);
+                arbolBinario.RecorrerPRE(TView);
             }
             else
             {
