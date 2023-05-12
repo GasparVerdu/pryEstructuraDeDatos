@@ -52,11 +52,20 @@
             this.rdbDescendente = new System.Windows.Forms.RadioButton();
             this.rdbPreOrden = new System.Windows.Forms.RadioButton();
             this.rdbPostOrden = new System.Windows.Forms.RadioButton();
+            this.TView = new System.Windows.Forms.TreeView();
+            this.gboBuscar = new System.Windows.Forms.GroupBox();
+            this.cboCodBuscar = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.lblCodigoBuscar = new System.Windows.Forms.Label();
+            this.txtTramiteBus = new System.Windows.Forms.TextBox();
+            this.txtNombreBus = new System.Windows.Forms.TextBox();
+            this.btnEquilibrar = new System.Windows.Forms.Button();
             this.gboListado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.gboElementoEliminado.SuspendLayout();
             this.grbElementoNuevo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gboBuscar.SuspendLayout();
             this.SuspendLayout();
             // 
             // gboListado
@@ -123,7 +132,7 @@
             this.cboCodigo.FormattingEnabled = true;
             this.cboCodigo.Location = new System.Drawing.Point(56, 19);
             this.cboCodigo.Name = "cboCodigo";
-            this.cboCodigo.Size = new System.Drawing.Size(109, 21);
+            this.cboCodigo.Size = new System.Drawing.Size(115, 21);
             this.cboCodigo.TabIndex = 9;
             // 
             // btnEliminar
@@ -277,11 +286,92 @@
             this.rdbPostOrden.UseVisualStyleBackColor = true;
             this.rdbPostOrden.CheckedChanged += new System.EventHandler(this.rdbPostOrden_CheckedChanged);
             // 
+            // TView
+            // 
+            this.TView.Location = new System.Drawing.Point(498, 102);
+            this.TView.Name = "TView";
+            this.TView.Size = new System.Drawing.Size(301, 260);
+            this.TView.TabIndex = 21;
+            this.TView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TView_AfterSelect);
+            // 
+            // gboBuscar
+            // 
+            this.gboBuscar.Controls.Add(this.txtNombreBus);
+            this.gboBuscar.Controls.Add(this.cboCodBuscar);
+            this.gboBuscar.Controls.Add(this.txtTramiteBus);
+            this.gboBuscar.Controls.Add(this.btnBuscar);
+            this.gboBuscar.Controls.Add(this.lblCodigoBuscar);
+            this.gboBuscar.Location = new System.Drawing.Point(498, 19);
+            this.gboBuscar.Name = "gboBuscar";
+            this.gboBuscar.Size = new System.Drawing.Size(301, 77);
+            this.gboBuscar.TabIndex = 15;
+            this.gboBuscar.TabStop = false;
+            this.gboBuscar.Text = "Elemento eliminado";
+            // 
+            // cboCodBuscar
+            // 
+            this.cboCodBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCodBuscar.FormattingEnabled = true;
+            this.cboCodBuscar.Location = new System.Drawing.Point(56, 19);
+            this.cboCodBuscar.Name = "cboCodBuscar";
+            this.cboCodBuscar.Size = new System.Drawing.Size(115, 21);
+            this.cboCodBuscar.TabIndex = 9;
+            this.cboCodBuscar.SelectedIndexChanged += new System.EventHandler(this.cboCodBuscar_SelectedIndexChanged);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Location = new System.Drawing.Point(6, 46);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(165, 23);
+            this.btnBuscar.TabIndex = 4;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // lblCodigoBuscar
+            // 
+            this.lblCodigoBuscar.AutoSize = true;
+            this.lblCodigoBuscar.Location = new System.Drawing.Point(15, 24);
+            this.lblCodigoBuscar.Name = "lblCodigoBuscar";
+            this.lblCodigoBuscar.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigoBuscar.TabIndex = 4;
+            this.lblCodigoBuscar.Text = "Codigo:";
+            // 
+            // txtTramiteBus
+            // 
+            this.txtTramiteBus.Enabled = false;
+            this.txtTramiteBus.Location = new System.Drawing.Point(177, 46);
+            this.txtTramiteBus.Name = "txtTramiteBus";
+            this.txtTramiteBus.Size = new System.Drawing.Size(100, 20);
+            this.txtTramiteBus.TabIndex = 22;
+            this.txtTramiteBus.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // txtNombreBus
+            // 
+            this.txtNombreBus.Enabled = false;
+            this.txtNombreBus.Location = new System.Drawing.Point(177, 17);
+            this.txtNombreBus.Name = "txtNombreBus";
+            this.txtNombreBus.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreBus.TabIndex = 23;
+            // 
+            // btnEquilibrar
+            // 
+            this.btnEquilibrar.Location = new System.Drawing.Point(18, 368);
+            this.btnEquilibrar.Name = "btnEquilibrar";
+            this.btnEquilibrar.Size = new System.Drawing.Size(112, 23);
+            this.btnEquilibrar.TabIndex = 5;
+            this.btnEquilibrar.Text = "Equilibrar";
+            this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
+            // 
             // frmArbolBinario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(509, 403);
+            this.ClientSize = new System.Drawing.Size(811, 403);
+            this.Controls.Add(this.btnEquilibrar);
+            this.Controls.Add(this.gboBuscar);
+            this.Controls.Add(this.TView);
             this.Controls.Add(this.rdbPostOrden);
             this.Controls.Add(this.rdbPreOrden);
             this.Controls.Add(this.rdbDescendente);
@@ -300,6 +390,8 @@
             this.grbElementoNuevo.ResumeLayout(false);
             this.grbElementoNuevo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gboBuscar.ResumeLayout(false);
+            this.gboBuscar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -330,5 +422,13 @@
         private System.Windows.Forms.RadioButton rdbDescendente;
         private System.Windows.Forms.RadioButton rdbPreOrden;
         private System.Windows.Forms.RadioButton rdbPostOrden;
+        private System.Windows.Forms.TreeView TView;
+        private System.Windows.Forms.GroupBox gboBuscar;
+        private System.Windows.Forms.ComboBox cboCodBuscar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblCodigoBuscar;
+        private System.Windows.Forms.TextBox txtTramiteBus;
+        private System.Windows.Forms.TextBox txtNombreBus;
+        private System.Windows.Forms.Button btnEquilibrar;
     }
 }

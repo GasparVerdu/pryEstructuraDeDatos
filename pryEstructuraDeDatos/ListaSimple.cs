@@ -45,18 +45,26 @@ namespace pryEstructuraDeDatos
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (listaSimple.primero != null)
+            if (cboCodigo.Text != "")
             {
-                int codigo = Convert.ToInt32(cboCodigo.Text);
-                listaSimple.Eliminar(codigo);
-                listaSimple.Recorrer(lstListado);
-                listaSimple.Recorrer(cboCodigo);
-                listaSimple.Recorrer(grilla);
+                if (listaSimple.primero != null)
+                {
+                    int codigo = Convert.ToInt32(cboCodigo.Text);
+                    listaSimple.Eliminar(codigo);
+                    listaSimple.Recorrer(lstListado);
+                    listaSimple.Recorrer(cboCodigo);
+                    listaSimple.Recorrer(grilla);
+                }
+                else
+                {
+                    MessageBox.Show("La lista esta vacia ");
+                }
             }
             else
             {
-                MessageBox.Show("la lista esta vacia ");
+                MessageBox.Show("Selecciona un dato para eliminar");
             }
+            
 
             
 

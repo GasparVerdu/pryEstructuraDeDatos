@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatosProgramador));
             this.pcbox = new System.Windows.Forms.PictureBox();
             this.lblDNI = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -43,9 +44,11 @@
             // 
             // pcbox
             // 
+            this.pcbox.Image = ((System.Drawing.Image)(resources.GetObject("pcbox.Image")));
             this.pcbox.Location = new System.Drawing.Point(12, 12);
             this.pcbox.Name = "pcbox";
             this.pcbox.Size = new System.Drawing.Size(120, 101);
+            this.pcbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbox.TabIndex = 0;
             this.pcbox.TabStop = false;
             this.pcbox.Click += new System.EventHandler(this.pictureBox1_Click);

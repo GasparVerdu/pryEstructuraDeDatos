@@ -12,12 +12,27 @@ namespace pryEstructuraDeDatos
     class ClsArbolBinario
     {
         ClsNodo inicio;
+        string Nombre;
+        string Tramite;
 
+        private ClsNodo[] vector = new ClsNodo[100];
+        private Int32 indice = 0;
         public ClsNodo raiz
         {
             get { return inicio; }
             set { inicio = value; }
         }
+        public string nombre
+        {
+            get { return Nombre; }
+            set { Nombre = value; }
+        }
+        public string tramite
+        {
+            get { return Tramite; }
+            set { Tramite = value; }
+        }
+
         public void agregar(ClsNodo nuevo)
         {
             nuevo.izquierda = null;
@@ -52,6 +67,137 @@ namespace pryEstructuraDeDatos
                     NodoPadre.derecha = nuevo;
                 }
             }
+        }
+
+        public void Eliminar(Int32 Codigo)
+        {
+            if (raiz!= null)
+            {
+                ClsNodo RaizBuscar = raiz;
+                ClsNodo Auxiliar = null;
+
+                while (RaizBuscar.Codigo != Codigo)
+                {
+                    if (Codigo < RaizBuscar.Codigo)
+                    {
+                        Auxiliar = RaizBuscar;
+                        RaizBuscar = RaizBuscar.izquierda;
+                    }
+                    else
+                    {
+                        Auxiliar = RaizBuscar;
+                        RaizBuscar = RaizBuscar.derecha;
+                    }
+                }
+                if (RaizBuscar.Codigo == Codigo)
+                {
+                    if (RaizBuscar.izquierda == null && RaizBuscar.derecha == null)
+                    {
+                        if (Auxiliar == null)
+                        {
+                            raiz = null;
+                            return;
+                        }
+                        if (Auxiliar.izquierda == RaizBuscar)
+                        {
+                            Auxiliar.izquierda = null;
+                            return;
+                        }
+                        else
+                        {
+                            Auxiliar.derecha = null;
+                        }
+                    }
+                    if (RaizBuscar.izquierda == null)
+                    {
+                        if (Auxiliar == null)
+                        {
+                            raiz = RaizBuscar.derecha;
+                        }
+                        if (Auxiliar.izquierda == RaizBuscar)
+                        {
+                            Auxiliar.izquierda = RaizBuscar.derecha;
+                        }
+                        else
+                        {
+                            Auxiliar.derecha = RaizBuscar.derecha;
+                        }
+                    }
+                    if (RaizBuscar.derecha == null)
+                    {
+                        if (Auxiliar == null)
+                        {
+                            raiz = RaizBuscar.izquierda;
+                            return;
+                        }
+                        if (Auxiliar.izquierda == RaizBuscar)
+                        {
+                            Auxiliar.izquierda = RaizBuscar.izquierda;
+                        }
+                        else
+                        {
+                            Auxiliar.derecha = RaizBuscar.izquierda;
+                        }
+                    }
+                    if (RaizBuscar.izquierda != null && RaizBuscar.derecha != null)
+                    {
+                        ClsNodo Reemplazo = RaizBuscar.derecha;
+                        ClsNodo AuxReemplazo = RaizBuscar;
+                        while (Reemplazo.izquierda != null)
+                        {
+                            AuxReemplazo = Reemplazo;
+                            Reemplazo = Reemplazo.izquierda;
+                        }
+
+                        RaizBuscar.Codigo = Reemplazo.Codigo;
+                        RaizBuscar.Nombre = Reemplazo.Nombre;
+                        RaizBuscar.Tramite = Reemplazo.Tramite;
+                        if (AuxReemplazo == RaizBuscar)
+                        {
+                            AuxReemplazo.derecha = Reemplazo.derecha;
+                        }
+                        else
+                        {
+                            AuxReemplazo.izquierda = Reemplazo.derecha;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+
+        public void CargarVector(ClsNodo NodoPadre)
+        {
+            if (NodoPadre.izquierda == null)
+            {
+                CargarVector(NodoPadre.izquierda);
+            }
+            vector[indice] = NodoPadre;
+            indice = indice + 1;
+            if (NodoPadre.derecha == null)
+            {
+                CargarVector(NodoPadre.derecha);
+            }
+        }
+
+        public void EquilibrarArbol(Int32 ini, Int32 fin)
+        {
+            Int32 m = (ini + fin) / 2;
+            if (ini <= fin)
+            {
+                agregar(vector[m]);
+                EquilibrarArbol(ini, m + 1);
+                EquilibrarArbol(m + 1, fin);
+            }
+        }
+        public void Equilibrar()
+        {
+            indice = 0;
+            CargarVector(raiz);
+            raiz = null;
+            EquilibrarArbol(0, indice -1);
+
         }
 
         public void RecorrerASC(ListBox lista)
@@ -135,7 +281,7 @@ namespace pryEstructuraDeDatos
             {
                 InOrdenASC(lst, R.izquierda);
             }
-            lst.Items.Add(R.Codigo);
+            lst.Items.Add(R.Codigo + "" + R.Nombre + "" + R.Tramite);
             if (R.derecha != null)
             {
                 InOrdenASC(lst, R.derecha);
@@ -167,14 +313,7 @@ namespace pryEstructuraDeDatos
         }
         //public void InOrdenASC(StreamWriter sw, ClsNodo R) //grilla
         //{
-        //if (R.izquierda != null)
-        //{
-        //    OrdenPRE(grilla, R.izquierda);
-        //}
-        //grilla.Rows.Add(R.Codigo);
-        //if (R.derecha != null)
-        //{
-        //    InOrdenASC(grilla, R.derecha);
+        
         //}
         //}
 
@@ -184,7 +323,7 @@ namespace pryEstructuraDeDatos
             {
                 InOrdenDSC(lst, R.derecha);
             }
-            lst.Items.Add(R.Codigo);
+            lst.Items.Add(R.Codigo + "" + R.Nombre + "" + R.Tramite);
             if (R.izquierda != null)
             {
                 InOrdenDSC(lst, R.izquierda);
@@ -216,21 +355,13 @@ namespace pryEstructuraDeDatos
         }
         //public void InOrdenDSC(StreamWriter sw, ClsNodo R) 
         //{
-            //if (R.derecha != null)
-            //{
-            //    InOrdenDSC(grilla, R.derecha);
-            //}
-            //grilla.Rows.Add(R.Codigo);
-            //if (R.izquierda != null)
-            //{
-            //    InOrdenDSC(grilla, R.izquierda);
-            //}
+            
         //}//streamWriter
 
 
         public void OrdenPRE(ListBox lst, ClsNodo R)
         {
-            lst.Items.Add(R.Codigo);//R
+            lst.Items.Add(R.Codigo + "" + R.Nombre + "" + R.Tramite);//R
             if (R.izquierda != null)
             {
                 OrdenPRE(lst, R.izquierda);//I
@@ -266,14 +397,7 @@ namespace pryEstructuraDeDatos
         }//grilla
          //public void OrdenPRE(StreamWriter sw, ClsNodo R)
          //{
-         //grilla.Rows.Add(R.Codigo);//R
-         //if (R.izquierda != null)
-         //{
-         //    OrdenPRE(grilla, R.izquierda);//I
-         //}
-         //if (R.derecha != null)
-         //{
-         //    OrdenPRE(grilla, R.derecha);//D
+         
          //}
          //}//streamWriter
 
@@ -288,7 +412,7 @@ namespace pryEstructuraDeDatos
             {
                 OrdenPost(lst, R.derecha);//D
             }
-            lst.Items.Add(R.Codigo);//R
+            lst.Items.Add(R.Codigo + "" + R.Nombre + "" + R.Tramite);//R
         } //lista
         public void OrdenPost( ComboBox combo, ClsNodo R)
         {
@@ -319,16 +443,36 @@ namespace pryEstructuraDeDatos
          //public void OrdenPost(StreamWriter sw, ClsNodo R)
          //{
 
-        //if (R.izquierda != null)
-        //{
-        //    OrdenPost(grilla, R.izquierda);//I
-        //}
-        //if (R.derecha != null)
-        //{
-        //    OrdenPost(grilla, R.derecha);//D
-        //}
-        //grilla.Rows.Add(R.Codigo);//R
         //}//streamWriter
+        public void OrdenPRE(TreeNodeCollection NodoPadreTV, ClsNodo nodoR)
+        {
+            TreeNode NuevoNodo = NodoPadreTV.Add(nodoR.Codigo.ToString());
+            if (nodoR.izquierda != null)
+            {
+                OrdenPRE(NuevoNodo.Nodes, nodoR.izquierda);
 
+            }
+            if (nodoR.derecha != null)
+            {
+                OrdenPRE(NuevoNodo.Nodes, nodoR.derecha);
+            }
+        }
+        public void RecorrerPRE(TreeView arbol)
+        {
+            arbol.Nodes.Clear();
+            OrdenPRE(arbol.Nodes, raiz);
+        }
+        public ClsNodo cmdBuscar(Int32 parCodigo)
+        {
+            ClsNodo aux = raiz;
+            while (aux != null)
+            {
+                if (parCodigo == aux.Codigo) break;
+                if (parCodigo < aux.Codigo) aux = aux.izquierda;
+                else aux = aux.derecha;
+            }
+
+            return aux;
+        }
     }
 }
