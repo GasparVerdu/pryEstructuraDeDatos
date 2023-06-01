@@ -57,5 +57,11 @@ namespace pryEstructuraDeDatos
         {
             this.Close();
         }
+
+        private void baseDeDatosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmBaseDeDatos baseDeDatos = new frmBaseDeDatos();
+            baseDeDatos.ShowDialog();
+        }
     }
 }
