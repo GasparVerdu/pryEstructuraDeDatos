@@ -45,6 +45,7 @@ namespace pryEstructuraDeDatos
             {
 
                 MessageBox.Show(x.Message);
+                conexion.Close();
             }
         }
 
@@ -74,6 +75,7 @@ namespace pryEstructuraDeDatos
             {
 
                 MessageBox.Show(x.Message);
+                conexion.Close();
             }
         }
     }

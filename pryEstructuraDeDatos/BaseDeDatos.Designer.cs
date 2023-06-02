@@ -30,17 +30,17 @@
         {
             this.grilla = new System.Windows.Forms.DataGridView();
             this.grbProyeccion = new System.Windows.Forms.GroupBox();
-            this.grbSeleccion = new System.Windows.Forms.GroupBox();
-            this.grbAlgebraicas = new System.Windows.Forms.GroupBox();
-            this.btnProyeccionSimple = new System.Windows.Forms.Button();
-            this.btnSeleccionSimple = new System.Windows.Forms.Button();
-            this.btnUnion = new System.Windows.Forms.Button();
-            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
-            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
-            this.btnInterseccion = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
+            this.btnProyeccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnProyeccionSimple = new System.Windows.Forms.Button();
+            this.grbSeleccion = new System.Windows.Forms.GroupBox();
             this.btnSeleccionConvolucion = new System.Windows.Forms.Button();
+            this.btnSeleccionMultiatributo = new System.Windows.Forms.Button();
+            this.btnSeleccionSimple = new System.Windows.Forms.Button();
+            this.grbAlgebraicas = new System.Windows.Forms.GroupBox();
             this.btnDiferencia = new System.Windows.Forms.Button();
+            this.btnInterseccion = new System.Windows.Forms.Button();
+            this.btnUnion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.grbProyeccion.SuspendLayout();
             this.grbSeleccion.SuspendLayout();
@@ -67,6 +67,36 @@
             this.grbProyeccion.TabStop = false;
             this.grbProyeccion.Text = "Operaciones de Proyeccion";
             // 
+            // btnJuntar
+            // 
+            this.btnJuntar.Location = new System.Drawing.Point(6, 88);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(188, 23);
+            this.btnJuntar.TabIndex = 6;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
+            // 
+            // btnProyeccionMultiatributo
+            // 
+            this.btnProyeccionMultiatributo.Location = new System.Drawing.Point(6, 59);
+            this.btnProyeccionMultiatributo.Name = "btnProyeccionMultiatributo";
+            this.btnProyeccionMultiatributo.Size = new System.Drawing.Size(188, 23);
+            this.btnProyeccionMultiatributo.TabIndex = 3;
+            this.btnProyeccionMultiatributo.Text = "Proyeccion Multiatributo";
+            this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
+            // 
+            // btnProyeccionSimple
+            // 
+            this.btnProyeccionSimple.Location = new System.Drawing.Point(6, 30);
+            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
+            this.btnProyeccionSimple.Size = new System.Drawing.Size(188, 23);
+            this.btnProyeccionSimple.TabIndex = 0;
+            this.btnProyeccionSimple.Text = "Proyeccion Simple";
+            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
+            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
+            // 
             // grbSeleccion
             // 
             this.grbSeleccion.Controls.Add(this.btnSeleccionConvolucion);
@@ -78,6 +108,36 @@
             this.grbSeleccion.TabIndex = 2;
             this.grbSeleccion.TabStop = false;
             this.grbSeleccion.Text = "Operaciones de Seleccion";
+            // 
+            // btnSeleccionConvolucion
+            // 
+            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(6, 86);
+            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
+            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(188, 23);
+            this.btnSeleccionConvolucion.TabIndex = 7;
+            this.btnSeleccionConvolucion.Text = "Seleccion por convolucion";
+            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
+            this.btnSeleccionConvolucion.Click += new System.EventHandler(this.btnSeleccionConvolucion_Click);
+            // 
+            // btnSeleccionMultiatributo
+            // 
+            this.btnSeleccionMultiatributo.Location = new System.Drawing.Point(6, 57);
+            this.btnSeleccionMultiatributo.Name = "btnSeleccionMultiatributo";
+            this.btnSeleccionMultiatributo.Size = new System.Drawing.Size(188, 23);
+            this.btnSeleccionMultiatributo.TabIndex = 4;
+            this.btnSeleccionMultiatributo.Text = "Seleccion multiatributo";
+            this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
+            // 
+            // btnSeleccionSimple
+            // 
+            this.btnSeleccionSimple.Location = new System.Drawing.Point(6, 28);
+            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
+            this.btnSeleccionSimple.Size = new System.Drawing.Size(188, 23);
+            this.btnSeleccionSimple.TabIndex = 1;
+            this.btnSeleccionSimple.Text = "Seleccion simple";
+            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
+            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
             // 
             // grbAlgebraicas
             // 
@@ -91,55 +151,15 @@
             this.grbAlgebraicas.TabStop = false;
             this.grbAlgebraicas.Text = "Operaciones Algebraicas";
             // 
-            // btnProyeccionSimple
+            // btnDiferencia
             // 
-            this.btnProyeccionSimple.Location = new System.Drawing.Point(6, 30);
-            this.btnProyeccionSimple.Name = "btnProyeccionSimple";
-            this.btnProyeccionSimple.Size = new System.Drawing.Size(188, 23);
-            this.btnProyeccionSimple.TabIndex = 0;
-            this.btnProyeccionSimple.Text = "Proyeccion Simple";
-            this.btnProyeccionSimple.UseVisualStyleBackColor = true;
-            this.btnProyeccionSimple.Click += new System.EventHandler(this.btnProyeccionSimple_Click);
-            // 
-            // btnSeleccionSimple
-            // 
-            this.btnSeleccionSimple.Location = new System.Drawing.Point(6, 28);
-            this.btnSeleccionSimple.Name = "btnSeleccionSimple";
-            this.btnSeleccionSimple.Size = new System.Drawing.Size(188, 23);
-            this.btnSeleccionSimple.TabIndex = 1;
-            this.btnSeleccionSimple.Text = "Seleccion simple";
-            this.btnSeleccionSimple.UseVisualStyleBackColor = true;
-            this.btnSeleccionSimple.Click += new System.EventHandler(this.btnSeleccionSimple_Click);
-            // 
-            // btnUnion
-            // 
-            this.btnUnion.Location = new System.Drawing.Point(6, 28);
-            this.btnUnion.Name = "btnUnion";
-            this.btnUnion.Size = new System.Drawing.Size(188, 23);
-            this.btnUnion.TabIndex = 2;
-            this.btnUnion.Text = "Union";
-            this.btnUnion.UseVisualStyleBackColor = true;
-            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
-            // 
-            // btnProyeccionMultiatributo
-            // 
-            this.btnProyeccionMultiatributo.Location = new System.Drawing.Point(6, 59);
-            this.btnProyeccionMultiatributo.Name = "btnProyeccionMultiatributo";
-            this.btnProyeccionMultiatributo.Size = new System.Drawing.Size(188, 23);
-            this.btnProyeccionMultiatributo.TabIndex = 3;
-            this.btnProyeccionMultiatributo.Text = "Proyeccion Multiatributo";
-            this.btnProyeccionMultiatributo.UseVisualStyleBackColor = true;
-            this.btnProyeccionMultiatributo.Click += new System.EventHandler(this.btnProyeccionMultiatributo_Click);
-            // 
-            // btnSeleccionMultiatributo
-            // 
-            this.btnSeleccionMultiatributo.Location = new System.Drawing.Point(6, 57);
-            this.btnSeleccionMultiatributo.Name = "btnSeleccionMultiatributo";
-            this.btnSeleccionMultiatributo.Size = new System.Drawing.Size(188, 23);
-            this.btnSeleccionMultiatributo.TabIndex = 4;
-            this.btnSeleccionMultiatributo.Text = "Seleccion multiatributo";
-            this.btnSeleccionMultiatributo.UseVisualStyleBackColor = true;
-            this.btnSeleccionMultiatributo.Click += new System.EventHandler(this.btnSeleccionMultiatributo_Click);
+            this.btnDiferencia.Location = new System.Drawing.Point(6, 90);
+            this.btnDiferencia.Name = "btnDiferencia";
+            this.btnDiferencia.Size = new System.Drawing.Size(188, 23);
+            this.btnDiferencia.TabIndex = 8;
+            this.btnDiferencia.Text = "Diferencia";
+            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
@@ -151,34 +171,15 @@
             this.btnInterseccion.UseVisualStyleBackColor = true;
             this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
-            // btnJuntar
+            // btnUnion
             // 
-            this.btnJuntar.Location = new System.Drawing.Point(6, 88);
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(188, 23);
-            this.btnJuntar.TabIndex = 6;
-            this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
-            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
-            // 
-            // btnSeleccionConvolucion
-            // 
-            this.btnSeleccionConvolucion.Location = new System.Drawing.Point(6, 86);
-            this.btnSeleccionConvolucion.Name = "btnSeleccionConvolucion";
-            this.btnSeleccionConvolucion.Size = new System.Drawing.Size(188, 23);
-            this.btnSeleccionConvolucion.TabIndex = 7;
-            this.btnSeleccionConvolucion.Text = "Seleccion por convolucion";
-            this.btnSeleccionConvolucion.UseVisualStyleBackColor = true;
-            // 
-            // btnDiferencia
-            // 
-            this.btnDiferencia.Location = new System.Drawing.Point(6, 90);
-            this.btnDiferencia.Name = "btnDiferencia";
-            this.btnDiferencia.Size = new System.Drawing.Size(188, 23);
-            this.btnDiferencia.TabIndex = 8;
-            this.btnDiferencia.Text = "Diferencia";
-            this.btnDiferencia.UseVisualStyleBackColor = true;
-            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
+            this.btnUnion.Location = new System.Drawing.Point(6, 28);
+            this.btnUnion.Name = "btnUnion";
+            this.btnUnion.Size = new System.Drawing.Size(188, 23);
+            this.btnUnion.TabIndex = 2;
+            this.btnUnion.Text = "Union";
+            this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBaseDeDatos
             // 
