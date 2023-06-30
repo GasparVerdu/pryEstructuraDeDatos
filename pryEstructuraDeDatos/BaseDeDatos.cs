@@ -33,9 +33,9 @@ namespace pryEstructuraDeDatos
 
         private void btnJuntar_Click(object sender, EventArgs e)
         {
-            string varSql = "SELECT TITULO, NOMBRE" +
-                "FROM LIBRO, PAIS" +
-                "WHERE LIBRO.IDPAIS, PAIS.IDPAIS";
+            string varSql = "Select Titulo, Nombre " +
+                "From Libro inner join Pais " +
+                "on Libro.IdPais = Pais.IdPais ";
             objBD.Listar(grilla, varSql);
         }
 
@@ -47,6 +47,7 @@ namespace pryEstructuraDeDatos
 
         private void btnSeleccionMultiatributo_Click(object sender, EventArgs e)
         {
+            //
             string varSql = "SELECT * FROM Libro WHERE precio >= 800 AND precio <= 950 ";
             objBD.Listar(grilla, varSql);
         }
@@ -54,7 +55,7 @@ namespace pryEstructuraDeDatos
         private void btnUnion_Click(object sender, EventArgs e)
         {
             string varSql = " SELECT * FROM Libro WHERE idIdioma = 1 " +
-                " UNION " +
+                " union " +
                 " SELECT * FROM Libro WHERE idIdioma = 2 ";
             objBD.Listar(grilla, varSql);
         }
@@ -62,8 +63,8 @@ namespace pryEstructuraDeDatos
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
             string varSql = " SELECT * FROM Libro " +
-                " WHERE idAutor = 5 AND " +
-                " idlibro not in " +
+                " WHERE IdIdioma = 5 AND " +
+                " idlibro in " +
                 " (select idlibro from libro where idpais =2) " +
                 " order by 1 asc " ;                
             objBD.Listar(grilla, varSql);
@@ -74,18 +75,24 @@ namespace pryEstructuraDeDatos
             string varSql = "SELECT * FROM libro " +
                 " WHERE idIdioma = 2 and " +
                 " idLibro not in " +
-                " (SELECT idLibro FROM libro WHERE idPais = 3 " +
+                " (SELECT IdLibro FROM libro WHERE idPais = 3 )" +
                 " order by 1 asc ";
             objBD.Listar(grilla, varSql);
         }
 
         private void btnSeleccionConvolucion_Click(object sender, EventArgs e)
         {
+            //ojo
             string varSql = " SELECT * " +
-                " FROM (select * from libro where idautor = 4) as X " +
-                " WHERE ididiomna = 1 " +
+                " FROM (select * from libro where IdIdioma > 2) as X " +
+                " WHERE IdPais = 1 " +
                 " ORDER BY TITULO ";
             objBD.Listar(grilla, varSql);
+        }
+
+        private void frmBaseDeDatos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

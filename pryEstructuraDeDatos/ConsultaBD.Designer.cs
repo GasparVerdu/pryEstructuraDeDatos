@@ -82,6 +82,7 @@
             this.Controls.Add(this.txtConsultaSql);
             this.Name = "FrmConsultaBaseDatos";
             this.Text = "Consulta base de datos";
+            this.Load += new System.EventHandler(this.FrmConsultaBaseDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

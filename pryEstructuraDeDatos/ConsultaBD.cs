@@ -25,5 +25,10 @@ namespace pryEstructuraDeDatos
 
             objBaseDatos.Listar(grilla, varSql);
         }
+
+        private void FrmConsultaBaseDatos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

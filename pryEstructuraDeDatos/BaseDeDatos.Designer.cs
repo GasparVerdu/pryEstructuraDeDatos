@@ -192,6 +192,7 @@
             this.Controls.Add(this.grilla);
             this.Name = "frmBaseDeDatos";
             this.Text = "Base de datos";
+            this.Load += new System.EventHandler(this.frmBaseDeDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.grbProyeccion.ResumeLayout(false);
             this.grbSeleccion.ResumeLayout(false);
